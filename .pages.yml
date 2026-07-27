@@ -1,4 +1,8 @@
-media: public/img
+media:
+  input: public/img
+  output: /img
+  categories: [image]
+  rename: safe
 content:
   - name: posts
     label: Posts
@@ -12,7 +16,12 @@ content:
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
-      - { name: body, label: Body, type: rich-text }
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          path: public/img
+          rename: safe
   - name: about
     label: About page
     type: file
