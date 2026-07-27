@@ -64,7 +64,7 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 	- Includes `width`/`height` attributes to avoid [content layout shift](https://web.dev/cls/).
 	- Includes `loading="lazy"` for native lazy loading without JavaScript.
 	- Includes [`decoding="async"`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding)
-	- Images can be co-located with blog post files.
+	- Pages CMS uploads blog images to `public/img` and writes `/img/...` Markdown URLs via `.pages.yml`, matching Eleventy passthrough output.
 	- View the [Image plugin source code](https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.images.js)
 - Per page CSS bundles [via `eleventy-plugin-bundle`](https://github.com/11ty/eleventy-plugin-bundle).
 - Built-in [syntax highlighter](https://www.11ty.dev/docs/plugins/syntaxhighlight/) (zero-JavaScript output).
